@@ -19,9 +19,11 @@ namespace AverageWeeklyUnitsByRegion
 {
     public partial class formAverageWeeklyUnitsByRegion : Form
     {
+        const int MaximumRegions = 3;
+        const int MaximumDays = 7;
         // Initializing the following arrays, 2d arrays, and labels
         TextBox[] textBoxArray;
-        int[,] unitsArray = new int[3, 7];
+        int[,] unitsArray = new int[MaximumRegions, MaximumDays];
         Label[] outputLabelArray;
         Label region1;
         Label region2;
@@ -31,6 +33,7 @@ namespace AverageWeeklyUnitsByRegion
         {
             InitializeComponent();
         }
+        #region "Event Handlers"
         /// <summary>
         /// This event handler will occur when the Exit button is clicked and it will close the application
         /// </summary>
@@ -292,10 +295,12 @@ namespace AverageWeeklyUnitsByRegion
             // Calls the ResetForm() function
             ResetForm();
         }
+        #endregion
+
+        #region "Functions"
         /// <summary>
         /// Resetting the form to it's default state
         /// </summary>
-        #region "Functions"
         private void ResetForm()
         {
             // Clearing the controls
