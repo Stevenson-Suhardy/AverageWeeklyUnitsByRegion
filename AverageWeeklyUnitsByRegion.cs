@@ -1,6 +1,8 @@
 ﻿/* Author: Stevenson Suhardy
  * Date Created: February 28, 2022
+ * Last Modified: February 28, 2022
  * App name: Average Weekly Units By Region
+ * Description: This app will store all the past 7 days entries of each region and calculates the average of each region and also the overall average.
  */
 
 using System;
@@ -29,7 +31,11 @@ namespace AverageWeeklyUnitsByRegion
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This event handler will occur when the Exit button is clicked and it will close the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonExit_Click(object sender, EventArgs e)
         {
             // Exits the application
